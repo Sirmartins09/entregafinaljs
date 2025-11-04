@@ -526,6 +526,23 @@ main h3 {
   color: #fff;
 }
 
+.advertencia {
+  background-color: #b71c1c; /* rojo fuerte pero no chillón */
+  color: #fff;               /* texto blanco */
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 20px auto 25px auto;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.advertencia b {
+  color: #ffeb3b; /* amarillo suave para resaltar algo si querés */
+}
+
 @media (max-width: 500px) {
 
    main.formulario {
