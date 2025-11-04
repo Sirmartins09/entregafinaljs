@@ -525,3 +525,42 @@ main h3 {
 .boton-volver a.btn-volver {
   color: #fff;
 }
+
+@media (max-width: 500px) {
+
+   main.formulario {
+    padding: 20px;
+  }
+
+  .confirmar-titulo {
+    font-size: 1.5rem;
+  }
+
+  form input,
+  form select {
+    font-size: 0.95rem;
+  }
+  
+    .menu {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .menu .btn-nav {
+    width: 80%;
+    text-align: center;
+  }
+  main {
+    padding: 20px;
+  }
+
+  .card-doctor {
+    max-width: 100%;
+  }
+
+  .menu .btn-nav {
+    width: 80%;
+    text-align: center;
+  }
+}
