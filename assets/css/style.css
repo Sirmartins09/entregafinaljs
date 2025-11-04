@@ -1,0 +1,527 @@
+/* ============================
+   RESETEO BÁSICO
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px 15px;
+}
+/*=========================*/
+/*====PAGINA FORMULARIO====*/
+/*=========================*/
+main.formulario {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  color: #007bff;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+header h2 {
+  color: #555;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+main.formulario {
+  margin-top: 0;        /* 🔹 elimina separación extra */
+  padding-top: 0;
+}
+/* === FORMULARIO==== */
+form#form-confirmar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+form label {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: #555;
+}
+
+form input,
+form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+/* Campo de obra social */
+#campoObraSocial {
+  margin-top: 10px;
+}
+
+/* ===BOTÓN PRINCIPAL=== */
+form button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.swal2-confirm .swal2-styled{
+  background: #218838;
+}
+
+/* ===ENLACE A "MIS TURNOS"==*/
+.enlace-turnos {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.enlace-turnos a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.enlace-turnos a:hover {
+  color: #030f1b;
+  text-decoration: underline;
+}
+
+.btn-turnos {
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/*============================================*/
+
+/* ============================
+   PÁGINA DE DATOS (ESPECIALIDADES)
+============================ */
+main {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+main h1 {
+  color: #007bff;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+main h2 {
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+/* Tarjetas de especialidades */
+.card-especialidad {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 400px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-especialidad:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Enlaces de navegación */
+h2 a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+h2 a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* ============================
+   MENÚ DE NAVEGACIÓN INFERIOR
+============================ */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px; /* Más espacio entre los botones */
+  margin-top: 40px; /* Lo separa del contenido principal */
+  padding: 15px 0;
+}
+
+/* Botones del menú */
+.menu .btn-nav {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu .btn-nav:hover {
+  background-color: #8a8a8a;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================
+   PÁGINA DE DOCTORES
+============================ */
+main {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
+#calendario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+/* Ajuste del componente Vanilla Calendar */
+.vanilla-calendar {
+  margin: 0 auto;
+  max-width: 320px; /* Limita el ancho del calendario */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+/* Centrar todo el contenido del main */
+.contenedor-turno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main h1 {
+  color: #007bff;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+main h3 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* Tarjetas de doctores */
+.card-doctor {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 400px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-doctor:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Menú inferior */
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 15px 0;
+}
+
+.menu .btn-nav {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu .btn-nav:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================
+   PÁGINA FECHA Y HORA
+============================ */
+.contenedor-turno {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+.contenedor-turno h1 {
+  color: #007bff;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.lista-horarios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-hora {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-hora:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+#btn-confirmar {
+  margin-top: 30px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn-confirmar:hover {
+  background-color: #218838;
+}
+
+/* Menú inferior */
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 15px 0;
+}
+
+.menu .btn-nav {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu .btn-nav:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* ============================
+   PÁGINA MIS TURNOS
+============================ */
+.turnos-main a {
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.turnos-main h1 {
+  color: #007bff;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+#lista-turnos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.turno-confirmado {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.turno-confirmado:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.turno-confirmado h3 {
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+.btn-eliminar {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #a71d2a;
+  transform: translateY(-2px);
+}
+
+#btn-borrar-todo {
+  margin-top: 25px;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn-borrar-todo:hover {
+  background-color: #e0a800;
+}
+
+.turnos-main a {
+  display: inline-block;
+  margin-top: 25px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.turnos-main a:hover {
+  color: #0056b3;
+}
+
+.boton-volver {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.btn-volver {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: #fff; /* ✅ asegura que el texto sea blanco */
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Solución: fuerza el color blanco en el botón volver */
+.boton-volver a.btn-volver {
+  color: #fff;
+}
