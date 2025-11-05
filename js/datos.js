@@ -8,7 +8,7 @@ function obtenerDatos() {
   fetch(URL)
     .then(response => response.json())
     .then(data => {
-      // ✅ Mensaje de carga exitosa
+      
       Toastify({
         text: "Datos cargados correctamente",
         gravity: "top",
@@ -20,7 +20,7 @@ function obtenerDatos() {
       renderTurnos(data);
     })
     .catch(() => {
-      // ⚠️ Mensaje de error
+    
       Toastify({
         text: "Error al cargar los datos",
         gravity: "top",
@@ -30,7 +30,7 @@ function obtenerDatos() {
       }).showToast();
     })
     .finally(() => {
-      // ✅ Mensaje visual usando Toastify (se ejecuta siempre)
+      
       Toastify({
         text: "Proceso de carga finalizado",
         duration: 1500,
@@ -65,5 +65,5 @@ function renderTurnos(turnosArray) {
   });
 }
 
-// Ejecutar al cargar
+
 obtenerDatos();

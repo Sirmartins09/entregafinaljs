@@ -12,7 +12,7 @@ function nombreProfesional() {
   `;
 }
 
-// Mostrar el título apenas se carga la página
+
 nombreProfesional();
 
 // ==============================
@@ -23,16 +23,14 @@ function obtenerDatos() {
     fetch(URL)
       .then(response => response.json())
       .then(data => {
-        // ✅ Guardar base completa de doctores
+       
         localStorage.setItem("doctoresData", JSON.stringify(data));
 
-        // ✅ Filtrar por especialidad elegida
         const especialidad = data.find(item => item.especialidad === especialidadSeleccionada);
 
         if (especialidad) {
           renderDoctores(especialidad.doctores);
 
-          // ✅ Mensaje visual de éxito
           Toastify({
             text: "Datos cargados correctamente",
             gravity: "top",
@@ -51,7 +49,7 @@ function obtenerDatos() {
         }
       })
       .catch(() => {
-        // ⚠️ Error al obtener datos
+        
         Toastify({
           text: "Error al cargar los datos",
           gravity: "top",
@@ -61,7 +59,7 @@ function obtenerDatos() {
         }).showToast();
       })
       .finally(() => {
-        // ✅ Toastify: mensaje breve que se ejecuta siempre
+        
         Toastify({
           text: "Proceso de carga finalizado",
           duration: 1500,
@@ -90,7 +88,7 @@ function renderDoctores(listaDoctores) {
       <p>Ver disponibilidad de turnos</p>
     `;
 
-    // ✅ Guardamos doctor seleccionado (nombre + días)
+ 
     card.addEventListener("click", () => {
       localStorage.setItem(
         "doctorSeleccionado",
@@ -106,5 +104,4 @@ function renderDoctores(listaDoctores) {
   });
 }
 
-// Ejecutar al cargar la página
 obtenerDatos();

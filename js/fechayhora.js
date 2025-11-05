@@ -38,7 +38,7 @@ function estaOcupado(doctor, fecha, hora) {
   return false;
 }
 
-// ✅ Filtra los días del doctor, borrando horarios ya ocupados
+
 function filtrarDias(diasOriginales, nombreDoctor) {
   const resultado = [];
 
@@ -53,7 +53,7 @@ function filtrarDias(diasOriginales, nombreDoctor) {
       }
     }
 
-    // solo guarda el día si todavía tiene horarios disponibles
+   
     if (horariosLibres.length > 0) {
       resultado.push({ fecha: dia.fecha, horarios: horariosLibres });
     }
@@ -79,11 +79,11 @@ const calendar = new VanillaCalendar("#calendario", {
       const fechaSeleccionada = self.selectedDates[0];
       mostrarHorarios(fechaSeleccionada);
 
-      // 🔹 Reaplicar los colores después de seleccionar un día
+      
       setTimeout(() => {
         marcarDiasDisponibles();
 
-        // 🎨 Resaltar el día seleccionado (verde)
+       
         const seleccionado = document.querySelector(
           `.vanilla-calendar-day__btn[data-calendar-date="${fechaSeleccionada}"]`
         );
@@ -95,7 +95,7 @@ const calendar = new VanillaCalendar("#calendario", {
       }, 100);
     },
 
-    // 🔹 Mantener los días marcados al cambiar de mes
+  
     changeToMonth() {
       setTimeout(marcarDiasDisponibles, 150);
     },
@@ -151,7 +151,7 @@ function mostrarHorarios(fechaSeleccionada) {
     boton.classList.add("btn-hora");
 
     boton.addEventListener("click", () => {
-      // Si no hay datos del paciente
+   
       if (!paciente) {
         Swal.fire({
           icon: "info",
@@ -164,7 +164,7 @@ function mostrarHorarios(fechaSeleccionada) {
         return;
       }
 
-      // Texto de atención
+ 
       let textoAtencion = "";
       if (paciente.obraSocial && paciente.obraSocial !== "Sin obra social") {
         textoAtencion = `
@@ -205,12 +205,12 @@ function mostrarHorarios(fechaSeleccionada) {
             obraSocial: paciente.obraSocial || "Particular",
           };
 
-          // ✅ 1. Guardar el turno en la lista general
+          //  1. Guardar el turno en la lista general
           let turnosGuardados = JSON.parse(localStorage.getItem("turnosGuardados")) || [];
           turnosGuardados.push(turnoConfirmado);
           localStorage.setItem("turnosGuardados", JSON.stringify(turnosGuardados));
 
-          // ✅ 2. Guardar turno como ocupado
+          //  2. Guardar turno como ocupado
           if (!estaOcupado(doctorSeleccionado.nombre, fechaSeleccionada, hora)) {
             turnosOcupados.push({
               doctor: doctorSeleccionado.nombre,
@@ -220,13 +220,13 @@ function mostrarHorarios(fechaSeleccionada) {
             localStorage.setItem("turnosOcupados", JSON.stringify(turnosOcupados));
           }
 
-          // ✅ 3. Actualizar los días y horarios disponibles
+          // 3. Actualizar los días y horarios disponibles
           diasDisponibles = filtrarDias(doctorSeleccionado.dias, doctorSeleccionado.nombre);
           fechasDisponibles = diasDisponibles.map(d => d.fecha);
           marcarDiasDisponibles();
           mostrarHorarios(fechaSeleccionada);
 
-          // ✅ 4. Mostrar mensaje
+        
           Swal.fire({
             icon: "success",
             title: "Turno confirmado",
